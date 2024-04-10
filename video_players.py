@@ -39,5 +39,5 @@ def hdplayers_player(m3u_content):
 def vidmoly_player(url):
     os.system(f'mpv "{url}" --http-header-fields="Referer: vidmoly.to"')
 
-def youtube_okru_player(url):
+def youtube_okru_videoseyredin_player(url):
     os.system(f"mpv {url}")

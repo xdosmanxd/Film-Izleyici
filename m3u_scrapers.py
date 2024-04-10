@@ -30,3 +30,12 @@ def vidmoly_getter(url):
         return(m3u_url)
     except:
         return("Error")
+
+def videoseyredin_getter(url):
+    video_id = url.split("/")[-1]
+    m3u_url = "https://videoseyred.in/playlist/" + video_id + ".json"
+    r = requests.get(m3u_url, headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"}).json()
+    final_url = r[0]["sources"][0]["file"]
+
+    return(final_url)
+    
