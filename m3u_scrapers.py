@@ -1,6 +1,8 @@
 import requests
+import re
 
-def source_getter(base_url):
+
+def hdplayers_getter(base_url):
     url = base_url + "&do=getVideo"
     hash = base_url.split("=")[1]
 
@@ -14,6 +16,17 @@ def source_getter(base_url):
     last_url = (lines[-1])
 
     r = requests.get(last_url, headers={"Accept": "*/*"})
-    m3u_file = r.text
+    m3u_content = r.text
 
-    return(m3u_file)
+    return(m3u_content)
+
+def vidmoly_getter(url):
+    r = requests.get(url)
+    try:
+        pattern = r'file:"(.*?)"'
+        matches = re.findall(pattern, r.text)  
+        m3u_url = matches[0]
+    
+        return(m3u_url)
+    except:
+        return("Error")
