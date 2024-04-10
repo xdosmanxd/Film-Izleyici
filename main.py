@@ -1,12 +1,4 @@
 from m3u_scrapers import *
 from video_players import *
 
-url1 = "https://hdplayersystem.live/player/index.php?data=a1d7311f2a312426d710e1c617fcbc8c"
-url2 = "https://vidmoly.to/embed-l7ha3gxw0iy0.html"
-url3 = "https://www.youtube.com/embed/JJ7Jkx5Koqs"
-url4 = "https://ok.ru/videoembed/3060596542006"
-url5 = "https://videoseyred.in/embed/370682"
-
-x = videoseyredin_getter(url5)
-
-youtube_okru_videoseyredin_player(x)
+others_player("https://vidmoly.to/embed-iugg3xjkxrvh.html")

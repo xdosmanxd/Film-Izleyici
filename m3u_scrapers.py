@@ -20,17 +20,6 @@ def hdplayers_getter(base_url):
 
     return(m3u_content)
 
-def vidmoly_getter(url):
-    r = requests.get(url)
-    try:
-        pattern = r'file:"(.*?)"'
-        matches = re.findall(pattern, r.text)  
-        m3u_url = matches[0]
-    
-        return(m3u_url)
-    except:
-        return("Error")
-
 def videoseyredin_getter(url):
     video_id = url.split("/")[-1]
     m3u_url = "https://videoseyred.in/playlist/" + video_id + ".json"

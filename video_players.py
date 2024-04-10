@@ -36,8 +36,5 @@ def hdplayers_player(m3u_content):
     # Delete the temporary file
     temp_file.close()
 
-def vidmoly_player(url):
-    os.system(f'mpv "{url}" --http-header-fields="Referer: vidmoly.to"')
-
-def youtube_okru_videoseyredin_player(url):
+def others_player(url):
     os.system(f"mpv {url}")
