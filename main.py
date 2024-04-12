@@ -39,7 +39,7 @@ while True:
         for index, source in enumerate(will_watch):
             print(f"#{index} {source}")
 
-        index_wewant = int(input("Please write the index (without the hashtag): "))         
+        index_wewant = int(input("Please select the source (without the hashtag): "))         
         
         source_wewant = (will_watch[list(will_watch)[index_wewant]])
         source_without_http = source_wewant.removeprefix("https://")
