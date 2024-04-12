@@ -8,14 +8,8 @@ def hdplayers_getter(base_url):
 
     r = requests.post(url, data={"hash": hash, "r": "https://www.wfilmizle.de" }, headers={"X-Requested-With": "XMLHttpRequest"})
     source_data = r.json()
-
-    new_url = (source_data["videoSource"])
-    r = requests.get(new_url)
-
-    lines = r.text.split("\n")
-    last_url = (lines[-1])
-
-    r = requests.get(last_url, headers={"Accept": "*/*"})
+    m3u_link = (source_data["securedLink"])
+    r = requests.get(m3u_link)
     m3u_content = r.text
 
     return(m3u_content)
