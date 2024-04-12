@@ -6,9 +6,9 @@ def hdplayers_player(m3u_content):
         temp_file.write(m3u_content)
    
     m3u_file_path = temp_file.name
-    os.system(f"mpv {m3u_file_path}")
+    os.system(f"mpv {m3u_file_path} > NUL 2>&1")
 
     temp_file.close()
 
 def others_player(url):
-    os.system(f"mpv {url}")
+    os.system(f"mpv {url} > NUL 2>&1")
