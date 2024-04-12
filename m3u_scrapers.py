@@ -1,6 +1,4 @@
 import requests
-import re
-
 
 def hdplayers_getter(base_url):
     url = base_url + "&do=getVideo"

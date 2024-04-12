@@ -1,3 +1,2 @@
 beautifulsoup4==4.12.3
-python_vlc==3.0.20123
 Requests==2.31.0
