@@ -29,7 +29,7 @@ while True:
         number = input("Please write the movie id (without the hashtag): ")
         is_available = False
         for movie in new_data:
-            if movie.startswith(f"#{number}"):
+            if movie.split()[0] == (f"#{number}"):
                 is_available = True
                 will_watch = new_data[movie]
 
